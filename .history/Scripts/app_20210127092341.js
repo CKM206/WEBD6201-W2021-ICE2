@@ -15,7 +15,9 @@ class Contact {
   }
   // Methods
   toString() {
-      return `Full Name     : ${this.m_fullName}\nContact Number: ${this.m_contactNumber}\nEmail Address : ${this.m_emailAddress}`;
+      return `Full Name: ${this.m_fullName}
+              Contact Number: ${this.m_contactNumber}
+              Email Address: ${this.m_emailAddress}`;
   }
 }
 
