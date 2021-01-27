@@ -6,23 +6,6 @@
 
 "use strict";
 
-let Contact = /** @class */ (function () {
-    // Constructor
-    function contact(fullName, contactNumber, emailAddress) {
-        this.m_fullName = fullName;
-        this.m_contactNumber = contactNumber;
-        this.m_emailAddress = emailAddress;
-    }
-    // Methods
-    contact.prototype.toString = function () {
-        return "Full Name: " + this.m_fullName +
-            "\nContact Number: " + this.m_contactNumber +
-            "\nEmail: " + this.m_emailAddress;
-    };
-    return contact;
-}());
-
-
 (function()
 {
     function displayHome()
@@ -117,10 +100,11 @@ let Contact = /** @class */ (function () {
 
         let sendButton = document.getElementById("sendButton");
         sendButton.addEventListener("click", function(event){
-            event.preventDefault();
+            //event.preventDefault();
 
-            let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
-            console.log(contact.toString());
+            console.log(fullName.value);
+            console.log(contactNumber.value);
+            console.log(emailAddress.value);
         });
     }
 
