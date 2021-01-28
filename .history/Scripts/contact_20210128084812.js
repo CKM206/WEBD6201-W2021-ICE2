@@ -37,12 +37,6 @@ class Contact {
         this.EmailAddress = emailAddress;
     }
     // Methods
-
-    /**
-     * toString() - This method is used to convert a Contact object into a string.
-     *            it overrides the built-in toString() function.
-     * @returns {string}
-     */
     toString() {
         return `Full Name     : ${this.m_fullName}\nContact Number: ${this.m_contactNumber}\nEmail Address : ${this.m_emailAddress}`;
     }
@@ -55,9 +49,9 @@ class Contact {
     toJSON()
     {
         return {
-            "fullName": this.fullName,
-            "contactNumber": this.contactNumber,
-            "emailAddress": this.emailAddress
+            "fullName": this.m_fullName,
+            "contactNumber": this.m_contactNumber,
+            "emailAddress": this.m_emailAddress
         }
     }
 
@@ -77,7 +71,7 @@ class Contact {
      *               values to a Contact Class Objects properties
      * 
      * @param {string} data 
-     * @returns {void}
+     * @return {void}
      */
     deserialize(data)
     {
