@@ -52,7 +52,8 @@ class Contact {
      *           into a JSON object made up of the Contact class properties.
      * @returns {object}
      */
-    toJSON() {
+    toJSON()
+    {
         return {
             "fullName": this.FullName,
             "contactNumber": this.ContactNumber,
@@ -66,16 +67,12 @@ class Contact {
      * 
      * @returns {string}
      */
-    serialize() {
-        if (this.FullName !== "" && this.ContactNumber !== "" && this.EmailAddress !== "") 
-        {
-            return `${this.FullName},${this.ContactNumber},${this.EmailAddress}`;
-        }
-        else 
-        {
-            console.error("Error: One or more Contact Properties are empty.");
-            return null;
-        }
+    serialize()
+    {
+        if(this.FullName !== "" && this.ContactNumber !== "" && this.EmailAddress !== "")
+            {
+        return `${this.FullName},${this.ContactNumber},${this.EmailAddress}`;
+            }
     }
 
     /**
@@ -85,7 +82,8 @@ class Contact {
      * @param {string} data 
      * @returns {void}
      */
-    deserialize(data) {
+    deserialize(data)
+    {
         // This will split up the values found in data, delimmited by commas
         //-into a property Array.
         let propertyArray = data.split(",");

@@ -67,13 +67,14 @@ class Contact {
      * @returns {string}
      */
     serialize() {
-        if (this.FullName !== "" && this.ContactNumber !== "" && this.EmailAddress !== "") 
-        {
+        if (this.FullName !== "" && this.ContactNumber !== "" && this.EmailAddress !== "") {
+            return `${this.FullName},${this.ContactNumber},${this.EmailAddress}`;
+        } else if (this.FullName === "" || this.ContactNumber === "" || this.EmailAddress === "") {
+            console.warn("Warning: One or more of the Contact Properties are empty.");
             return `${this.FullName},${this.ContactNumber},${this.EmailAddress}`;
         }
-        else 
-        {
-            console.error("Error: One or more Contact Properties are empty.");
+        if (this.FullName === "" && this.ContactNumber === "" && this.EmailAddress === "") {
+            console.error("Contact is empty.");
             return null;
         }
     }

@@ -120,10 +120,10 @@ let myContact =
     
     if(localStorage.length > 0)
     {
-      let contactList = document.getElementById("contactList");
+      let contactList = document.getElementById("contactList")
       let data = "";
 
-      for (let index = 0; index < localStorage.length; index++)
+      for (let index = 0; index < localStorage; index++)
       {
         let contactData = localStorage.getItem(index + 1).toString();
         let contact = new Contact();
